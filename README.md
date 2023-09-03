@@ -1,7 +1,6 @@
-# Frontend Mentor - Time tracking dashboard solution
+# Frontend Mentor - Advice generator app solution
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 ## Table of contents
 
 - [Overview](#overview)
@@ -20,29 +19,24 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Switch between viewing Daily, Weekly, and Monthly stats
+- Generate a new piece of advice by clicking the dice icon
 
 ### Screenshot
 
 ![](./screenshot.jpg)
 
 -- desktop view
-![Alt text](images/desktop%20screenshot.png)
-
-![Alt text](images/destop%20weekly%20preview.png)
-
-![Alt text](images/desktop%20monthly%20preview.png)
+![Alt text](images/destopView.png)
 -- mobile view
 
-![Alt text](images/moblie%20screenshot.png)
-
+![Alt text](images/mobileView.png)
 
 ### Links
 
-- Solution URL: [Github repo](https://github.com/Abderaouf16/Frentend_mentor_challenge_9__Time-tracking-dashboard)
-- Live Site URL: [Live website](https://abderaouf16.github.io/Frentend_mentor_challenge_9__Time-tracking-dashboard/)
+- Solution URL: [Github repo](https://github.com/Abderaouf16/Frentend_mentor_challenge_10__-Advice-generator-app)
+- Live Site URL: [Live website](https://abderaouf16.github.io/Frentend_mentor_challenge_10__-Advice-generator-app/)
 
 ## My process
 
@@ -51,27 +45,30 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 
 ### What I learned
 
-1-Doing this challenge I learned abou The Document method querySelectorAll() which returns a node list of element, for exemple in this challenge to modify the textContent of that node list we need to loop over the node elements 'I used the forEach method'
+1-Doing this challenge I learned how to fetch data from an API and hendle the response from it 
+2- the second thing that i learned is async function and it 
+3- I learned about destructuring assignment in JavaScript to extract specific values from an object.     
 
-2- The other thing that I learn is how to taget a label of a checked input, so when the user clicks on that label it color will change
-    
 
-
-```css
-input[type="radio"]:checked + label {
-  color: white;
+``` js
+async function getAdvice() {
+  const res = await fetch(url);
+  const {
+    slip: { id, advice },
+  } = await res.json();
+  adviceNumber.innerText = id;
+  AdviceText.innerText = advice;
 }
 ```
 ```js
- previousTitleElments.forEach((previousTitle)=>{
-                previousTitle.textContent = 'Yesterday - '
-         })
+ const {
+    slip: { id, advice },
+  } = await res.json();
 ```
 
 
