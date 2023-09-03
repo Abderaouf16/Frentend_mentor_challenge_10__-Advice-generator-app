@@ -74,6 +74,7 @@ button{
     cursor: pointer;
     border: none;
     top:91%;
+    transition: 0.3s ease-in-out;
     
 }
 
@@ -81,4 +82,9 @@ button{
   main {
     width: 40%; 
   }
+}
+/* Active*/
+
+button:hover{
+  box-shadow: 0px 0px 15px var(--col-Neon-Green);
 }
